@@ -125,7 +125,16 @@ to discuss your plans.
 
 For more information see [the development documentation](developing.md).
 
+## Correction to do 
 
+In file <em>/usr/lib/python3.9/xml/etree/ElementTree.py line 1348</em>, change 
+```python
+parser = XMLParser(target=TreeBuilder())
+```
+to 
+```python
+parser = XMLParser(target=TreeBuilder(), encoding="utf-8")
+```
 
 ## See also
 
